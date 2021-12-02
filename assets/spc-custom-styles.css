@@ -1,0 +1,965 @@
+/* Table of contents
+––––––––––––––––––––––––––––––––––––––––––––––––––
+- Banner
+- Modal
+- Tabs
+- Main Dashboard Tab
+- Measurement Tab
+- Tables/Dropdown
+- Containers
+- Media Queries
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+#app-container * {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+
+body {
+  /*background-color: #1e2130;*/
+  background-color: "white";
+  /*change*/
+  /*color: #f3f5f4;*/
+  color: #000;
+  font-family: "Open Sans", sans-serif;
+  width: 100%;
+  height: 100vh;
+  max-width: 100% !important;
+  overflow-x: hidden;
+  margin: 0;
+}
+
+#big-app-container {
+  max-width: 110%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 6rem;
+}
+
+.banner {
+  height: fit-content;
+  /*background-color: #1e2130;*/
+  background-color: "white";
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #4B5460;
+  padding: 1rem 2rem;
+  width: 100%;
+}
+
+/*changes*/
+.btn-secondary {
+	color: #fff;
+	background-color: #2b8ce3;
+	border-color: #2b8ce3;
+}
+
+/*changes*/
+.btn-primary {
+	color: #000;
+	background-color: #007bff;
+	border-color: #007bff;
+}
+
+
+.banner h5 {
+  font-family: 'Open Sans Semi Bold', sans-serif;
+  font-weight: 500;
+  line-height: 1.2;
+  font-size: 2rem;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+}
+
+.banner h6 {
+  font-size: 1.6rem;
+  line-height: 1;
+}
+
+button {
+  color: #fcfcff;
+  margin-right: 10px;
+  height: 3rem;
+  line-height: 3rem;
+}
+
+#banner-logo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+button:hover {
+  color: #92e0d3;
+  border-color: whitesmoke;
+}
+
+.banner Img {
+  height: 3rem;
+  margin: 0px 10px;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /*Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1005; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100vw; /* Full width */
+  height: 100vh; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.markdown-container {
+  width: 60vw;
+  margin: 10% auto;
+  padding: 10px 15px;
+  background-color: #fff;z
+}
+
+.close-container {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  height: 40px;
+}
+
+.closeButton {
+  padding: 0 15px;
+  font-weight: normal;
+  float: right;
+  height: 100%;
+  border: none;
+}
+
+.closeButton:hover {
+  color: #91dfd2;
+}
+
+/* Tabs
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+
+.custom-tabs {
+  /*background-color: #1E2130;*/
+  background-color: "white";
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 14px;
+  height: fit-content;
+  cursor: pointer;
+}
+
+.custom-tab--selected {
+  border-bottom: #91dfd2 solid 4px !important;
+}
+
+.custom-tab {
+  margin-right: 3px;
+}
+
+/*.nav-tabs {
+  border-bottom: none;
+}*/
+
+
+.expand:focus{
+  color: black;
+}
+
+.expand:hover{
+  color: black;
+}
+
+.display-4 {
+  font-size: 2rem;
+}
+
+.navbar-toggler-icon {
+  width: 3em;
+  height: 3em;
+}
+
+/*
+change
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+  background-color: rgb(22, 26, 40);
+  border-color: transparent;
+}*/
+
+a {
+  /*color: #ffffff; change */
+  text-decoration: none;
+}
+
+
+.section-banner {
+  /*color: darkgray;  change*/
+  color: #000;
+  font-size: 1.5rem;
+  text-align: left;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid #4b5460;
+}
+
+/* Main Dashboard Tab
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+#top-section-container {
+  /*height: 40rem;*/
+  flex-direction: row;
+  display: flex;
+  max-width: 100%;
+  width: 100%;
+}
+
+#top-section-container2 {
+  /*height: 40rem;*/
+  flex-direction: row;
+  display: flex;
+  max-width: 100%;
+  width: 100%;
+}
+
+#metric_header > div {
+  font-weight: bold;
+  font-size: 1.35rem;
+  line-height: 3rem;
+}
+
+#m_header_5 {
+  margin-top: 0rem !important;
+}
+
+#control-chart-container {
+  position: relative;
+  z-index: 4;
+  width: 100%;
+  /*border-top: #1E2130 solid 0.8rem;*/
+  border-top: #fff solid 0.8rem;
+}
+
+
+#piechart.plot-container plotly {
+  height: 100%;
+}
+
+#card-1, #card-2, #utility-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+#card-1 {
+  margin-bottom: 3rem;
+}
+
+#utility-card {
+  height: 4rem !important;
+  margin-top: 2rem;
+}
+
+#stop-button > div > button:hover {
+  color: #91dfd2 !important;
+}
+
+/* Tab1 content
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+#set-specs-intro-container {
+  font-weight: bold;
+  margin: 8rem 5rem 1rem;
+  font-size: 1.6rem;
+}
+
+
+#metric-select-title {
+  color: darkgray;
+}
+
+#button-div {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+#value-setter-view-btn {
+  margin-left: 20px;
+}
+
+#value-setter-panel {
+  line-height: 2;
+}
+
+#value-setter-panel-header {
+  font-weight: bold;
+  color: darkgray;
+  line-height: 1;
+  padding: 2rem 0;
+  border-bottom: 1px solid #4b5460;
+}
+
+#value-setter-panel-header > div {
+  text-align: right;
+}
+
+#value-setter-view-btn, #value-setter-set-btn {
+  border: 1px solid #4B5460;
+  color: darkgray;
+}
+
+#value-setter-set-btn:hover, #value-setter-view-btn:hover {
+  color: #91dfd2;
+  border-color: white;
+}
+
+#value-setter-panel-usl, #value-setter-panel-lsl, #value-setter-panel-ucl, #value-setter-panel-lcl {
+  padding: 1rem 0;
+}
+
+/*
+.output-datatable {
+  margin: 2rem 0rem 2rem 2rem;
+  line-height: 3;
+  align-self: flex-end;
+  width: 80%;
+}*/
+
+.button, button, input[type="text"] input[type="submit"], input[type="reset"], input[type="button"] {
+  /*theme*/
+  /*color: #fff;*/
+  color: #000;
+}
+
+/*Dropdown*/
+.setting-input {
+  width: 100% !important;
+  height: 100%;
+}
+
+.react-numeric-input, .react-numeric-input input {
+  width: 100% !important;
+}
+
+.react-numeric-input input {
+  /*background-color: #242633 !important; change*/
+  background-color: #fff !important; 
+  border-color: darkgray !important;
+  /*color: white !important; change */
+  color: black !important; 
+}
+
+.react-numeric-input b:nth-child(2) i {
+  border-color: transparent transparent white !important;
+}
+
+.react-numeric-input b:nth-child(3) i {
+  border-color: white transparent transparent !important;
+}
+
+
+/* Dropdown
+----------------------------------------------*/
+
+/*Dropdown items*/
+.Select-control, .Select-multi-value-wrapper, .Select-menu-outer div {
+  /*background-color: #242633; change */
+  background-color: #fff;  
+}
+
+/*Dropdown items*/
+.Select-control, .Select, .Select-value-label, .Select-clear-zone {
+  /*color: white; change*/
+  color: black; 
+}
+
+
+/*Dropdown items*/
+.Select-menu-outer {
+  /*background-color: #242633; change */
+  background-color: #fff;
+  border: 1px solid darkgray !important;
+}
+
+/*Dropdown items*/
+.Select-menu-outer div:hover {
+  background-color: rgba(83, 91, 143, 0.5) !important;
+  cursor: pointer;
+}
+
+/*Dropdown arrow + delete button*/
+.Select-control, .Select-control > span {
+  /*change*/
+  /*color: white;*/
+  color: black;
+  /*background: #242633 !important;*/
+  background: #fff !important;
+}
+
+/*Placeholder*/
+.Select.has-value.Select--single > .Select-control .Select-value .Select-value-label, .Select.has-value.is-pseudo-focused.Select--single > .Select-control .Select-value .Select-value-label {
+  /*color: white !important; change*/
+  color: black !important; 
+}
+
+/*Placeholder*/
+.Select--single > .Select-control .Select-value, .Select-placeholder {
+  /*border: 1px solid darkgray;*/
+  border-radius: 4px;
+  /*change*/
+  /*background-color: #242633;*/
+  background-color: #fff;
+  cursor: pointer;
+}
+
+
+.Select.is-focused:not(.is-open) > .Select-control {
+  border-color: #91dfd2 !important;
+}
+
+/* Container
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+#app-container {
+  /*background: #1E2130;*/
+  background: "white";
+  margin: 1rem 2rem;
+  max-width: 100%;
+  width: 100%;
+  /*height: calc(100vh - 10rem - 1px);*/
+}
+
+#app-content {
+  background: inherit;
+  padding: 0;
+  width: 100%;
+  max-width: 100%;
+}
+
+#settings-menu {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  margin: 4rem 5rem 1rem;
+}
+
+#metric-select-menu {
+  flex: 1 1 0;
+}
+
+#value-setter-menu {
+  flex: 1 1 30%;
+  margin-left: 5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+
+#graphs-container {
+  display: flex;
+  flex-direction: column;
+  flex: 3 1;
+  max-width: calc(75%);
+  width: 70%;
+}
+
+
+/* Tab 2 Quick stats
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+#quick-stats {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  /*border-right: #1E2130 solid 0.8rem;*/
+  border-right: #fff solid 0.8rem;
+  flex: 1 1;
+  padding: 2rem;
+  max-width: 25%;
+}
+
+#operator-led {
+  width: 200px;
+}
+
+#operator-led > div {
+  width: 80%;
+  margin: auto;
+}
+
+#operator-led > div > div {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+#operator-led > div > div svg:nth-child(1) {
+  margin-left: -1rem;
+}
+
+#progress-gauge > div, #progress-gauge > div > div, #progress-gauge > div > div > div {
+  width: 100%;
+  text-align: center;
+}
+
+#progress-gauge svg {
+  width: 80%;
+  height: auto;
+}
+
+#progress-gauge > div > div > div > div {
+  color: white !important;
+}
+
+/*pressure-gauge track*/
+.eUJyCY .track {
+  stroke: #f4d44d !important;
+  stroke-width: 10;
+}
+
+.eUJyCY .track.progress {
+  stroke: #fff3c5 !important;
+}
+
+/* Tab 2 Specs
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+#stop-button > div > button {
+  color: white !important;
+  background-color: #1d202d !important;
+  border: 1px solid #4B5460 !important;
+  border-radius: 4px;
+  height: 40px;
+  line-height: 40px;
+}
+
+#stop-button > div > button:hover {
+  color: #91dfd2 !important;
+  border-color: white !important;
+  background-color: #1d202d !important;
+}
+
+#card-1 P, #card-2 P {
+  margin: 2rem;
+  color: inherit;
+  font-weight: bold;
+  align-self: flex-start;
+}
+
+#card-2 .scale, #card-2 .needle, #card-2 .needle-knob {
+  display: none !important;
+}
+
+/* Tab 2 metric row
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.metric-row-button {
+  border: none;
+  padding: 0px 0px;
+  color: #95969A;
+  font-size: 1rem;
+  letter-spacing: 0.02rem;
+}
+
+.metric-row-button:hover {
+  border: none;
+  color: white !important;
+}
+
+#metric-div {
+  padding: 1rem 2rem 1rem 1rem;
+}
+
+#metric-rows {
+  overflow-y: scroll;
+  width: 100%;
+  height: 30rem;
+}
+
+
+.toast-header {
+  background-color: #000;
+  color: #fff;
+  font-family: 'Open Sans Semi Bold', sans-serif;
+}
+
+.toast-body {
+  background-color: #000;
+  font-size: 1.4rem;
+}
+
+
+
+/*
+  ##Device = Most of the Smartphones Mobiles / ipad (Portrait)
+  */
+@media only screen and (max-width: 950px) {
+
+  body {
+    font-size: 1.3rem;
+  }
+
+  #big-app-container {
+    padding: 1rem;
+  }
+
+  .banner {
+    flex-direction: column-reverse;
+    padding: 1rem 0.5rem;
+  }
+
+  #banner-text {
+    text-align: center;
+  }
+
+  .banner h5 {
+    font-size: 1.4rem;
+  }
+
+  .banner h6 {
+    font-size: 1.3rem;
+  }
+
+  #banner-logo button {
+    display: none;
+  }
+
+  .banner Img {
+    height: 3rem;
+    margin: 1rem;
+  }
+
+  #app-container {
+    height: auto;
+  }
+
+  #set-specs-intro-container {
+    margin: 4rem 2rem 0rem 2rem;
+    font-size: inherit;
+  }
+
+  #settings-menu {
+    margin: 2rem;
+    flex-direction: column;
+  }
+
+  #settings-menu > div {
+    width: 100%;
+    flex: none;
+    display: flex;
+    flex-direction: column;
+    flex-basis: auto;
+    margin: 2rem 0rem;
+  }
+
+  #value-setter-panel-header {
+    display: none;
+  }
+
+  #button-div {
+    display: block;
+    text-align: center;
+  }
+
+  #button-div button {
+    margin: 1rem auto;
+    display: block;
+  }
+
+  .output-datatable {
+    align-self: center;
+    margin: 2rem;
+  }
+
+
+  #quick-stats {
+    max-width: 100%;
+  }
+
+  #graphs-container {
+    flex: 1;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  #top-section-container > div {
+    width: 100%;
+    height: auto;
+  }
+
+  #card-1 P, #card-2 P {
+    align-self: auto;
+  }
+
+
+  #quick-stats {
+    border-right: none;
+  }
+
+}
+
+@media only screen and (max-width: 600px) {
+  /* Display measurement row contents block-level on mobile*/
+  /** Display every row content in block*!*/
+  #metric_header {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+
+  #metric-rows {
+    height: fit-content;
+  }
+
+  #value-setter-panel {
+    line-height: 2.5;
+  }
+
+  .metric-row {
+    flex-direction: column;
+    height: fit-content !important;
+    justify-content: space-between;
+    align-items: flex-start;
+    /*border-top: 1px solid #1E2130;*/
+    border-top: 1px solid #fff;
+    /*border-bottom: 1px solid #1E2130;*/
+    border-bottom: 1px solid #fff;
+  }
+
+  #metric-rows .column, #metric-rows .columns {
+    width: 100% !important;
+    float: none;
+    margin: 0.25rem 0 !important;
+    padding-left: 50%;
+    position: relative;
+  }
+
+  #metric-rows .column:before, #metric-rows .columns:before {
+    /* Now like a table header */
+    position: absolute;
+    /* Top/left values mimic padding */
+    left: 6px;
+    width: 45%;
+    padding-right: 10px;
+    white-space: nowrap;
+  }
+
+  /** Attach header vertically to table */
+  .metric-row > div {
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+  }
+
+  /*Hide Sparkline*/
+  .metric-row > div:nth-of-type(3) {
+    display: none;
+  }
+
+  .metric-row > div:nth-of-type(6) > div {
+    margin-top: 6.5px !important;
+  }
+
+  /*Add table header column*/
+  .metric-row > div:nth-of-type(1):before {
+    content: "Parameter";
+  }
+
+  .metric-row > div:nth-of-type(2):before {
+    content: "Total Measurement";
+  }
+
+  .metric-row > div:nth-of-type(3):before {
+    content: "   ";
+  }
+
+  .metric-row > div:nth-of-type(4):before {
+    content: "OOC %";
+  }
+
+  .metric-row > div:nth-of-type(5) {
+    margin-top: 0 !important;
+  }
+
+  .metric-row > div:nth-of-type(5):before {
+    content: "Out of Control";
+  }
+
+  .metric-row > div:nth-of-type(6):before {
+    content: "Pass / Fail";
+  }
+
+  .output-datatable {
+    width: auto;
+  }
+}
+
+
+/* This creates a skinny side bar fixed to the left of the page */
+#sidebar {
+  text-align: center;
+  padding: 2rem 1rem;
+  /*background-color: #1E2130;*/
+  background-color: "white";
+}
+
+#sidebar h2 {
+  text-align: left;
+  margin-bottom: 0;
+}
+
+/* Hide the blurb on a small screen */
+#blurb {
+  display: none;
+}
+
+/*
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+  /*color:#fff; change
+  color:#000; 
+
+}
+
+.navbar-toggler {
+  line-height: 5rem;
+}
+
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+
+  background-color: #000;
+}*/
+
+#sidebar-toggle {
+  display: none;
+}
+
+#collapse *:first-child {
+  margin-top: 1rem;
+}
+
+/* add the three horizontal bars icon for the toggle */
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 25 25' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(0, 0, 0, 1)' stroke-width='3' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+
+@media (min-width: 48em) {
+  #sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 26rem;
+    text-align: left;
+    transition: margin 0.3s ease-in-out, padding 0.3s ease-in-out;
+  }
+
+  #sidebar-toggle {
+    display: inline-block;
+    position: relative;
+    top: 0;
+    transition: top 0.3s ease-in-out;
+  }
+
+  /* add negative margin to sidebar to achieve the collapse */
+  #sidebar.collapsed {
+    margin-left: -18.5rem;
+    padding-right: 0.5rem;
+  }
+
+  /* move the sidebar toggle up to the top left corner */
+  #sidebar.collapsed #sidebar-toggle {
+    top: -2rem;
+  }
+
+  /* also adjust margin of page content */
+  #sidebar.collapsed ~ #page-content {
+    margin-left: 6.5rem;
+  }
+
+  /* move all contents of navbar other than header (containing toggle) further
+     off-screen */
+  #sidebar.collapsed > *:not(:first-child) {
+    margin-left: -6rem;
+    margin-right: 6rem;
+  }
+
+  /* reveal the blurb on a large screen */
+  #blurb {
+    display: block;
+  }
+
+  /* Hide the toggle on a large screen */
+  #navbar-toggle {
+    display: none;
+  }
+
+  #collapse {
+    display: block;
+  }
+
+  /* set margins of the main content so that it doesn't overlap the sidebar */
+  #page-content {
+    margin-left: 22rem;
+    margin-right: 2rem;
+    transition: margin-left 0.3s ease-in-out;
+  }
+}
+
+
+.table {
+  width: 100%;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+
+.popover {
+  max-width: 100%;
+  line-height: 2.3;
+  background-color: #000;
+}
+
+
+.popover-header {
+  background-color: #000;
+  color: rgb(255, 255, 255);
+  font-family: 'Open Sans Semi Bold', sans-serif;
+  font-size: 2.0rem;
+  font-weight: 500;
+  border-bottom: 0px;
+}
+
+.popover-body {
+  background-color: #000;
+  color: #fff;
+  font-size: 1.3rem;
+}
+
+.nav-link {
+	display: block;
+	padding: .5rem 2rem;
+}
+
+
+textarea { word-break: break-all; }
+
+
+.shadowsharp {
+  /*border: 1px solid black ;*/
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+} 

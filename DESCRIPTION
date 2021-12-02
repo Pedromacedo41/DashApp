@@ -1,0 +1,13 @@
+Package: gridlayout
+Title: responsive grid for dash app
+Version: 0.0.1
+Description: responsive grid for dash app
+Depends: R (>= 3.0.2)
+Imports: 
+Suggests: 
+License: GPL-3.0
+URL: https://github.com/pedromacedo41/gridlayout
+BugReports: https://github.com/pedromacedo41/gridlayout/issues
+Encoding: UTF-8
+LazyData: true
+KeepSource: true

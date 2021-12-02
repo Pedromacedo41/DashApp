@@ -1,0 +1,11 @@
+include gridlayout/gridlayout.min.js
+include gridlayout/gridlayout.min.js.map
+include gridlayout/async-*.js
+include gridlayout/async-*.js.map
+include gridlayout/*-shared.js
+include gridlayout/*-shared.js.map
+include gridlayout/metadata.json
+include gridlayout/package-info.json
+include README.md
+include LICENSE
+include package.json
